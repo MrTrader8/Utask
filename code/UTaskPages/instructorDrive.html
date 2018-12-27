@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>UTask Instructor Drive</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700,900|Raleway" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <link rel="stylesheet" href="fonts/ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="fonts/fontawesome/css/font-awesome.min.css">
+
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GOOGLE CHARTS INTEGRATION --------------------------------------------->
+    <script type="text/javascript"
+    src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+      // Callback that creates and populates a data table,
+      // instantiates the pie chart, passes in the data and
+      // draws it.
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+
+
+        data.addColumn('string', 'File Type');
+        data.addColumn('number', 'Number of Files');
+        data.addRows([
+        ['PDF', 1],
+        ['TXT', 7],
+        ['DOC', 1],
+        ['MOV', 1],
+        ['GIF', 1],
+        ['JPG', 1]
+        ]);
+
+        // Set chart options
+        var options = {'title':'',
+                       'width':500,
+                       'height':400};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.PieChart(
+            document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+    <!-- END OF GOOGLE CHARTS INTEGRATION ------------------------------------->
+
+  </head>
+  <body>
+
+      <header role="banner">
+
+        <nav class="navbar navbar-expand-md navbar-dark bg-light">
+          <div class="container">
+            <a class="navbar-brand" href="index.html">UTASK</a>
+
+            <button class="navbar-toggler"
+                  type="button"
+                  data-toggle="collapse"
+                  data-target="#uTaskDefaultNavBar"
+                  aria-controls="uTaskDefaultNavBar"
+                  aria-expanded="false"
+                  aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse navbar-light" id="uTaskDefaultNavBar">
+              <ul class="navbar-nav ml-auto pl-lg-5 pl-0">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle"
+                        href="destination.html" id="dropdown04"
+                        data-toggle="dropdown" aria-haspopup="true"
+                        aria-expanded="false">
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="dropdown04">
+                      <a class="dropdown-item" href="auth.html">My Account</a>
+                    </div>
+                  </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="index.html">Drive</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="http://www.acorn.utoronto.ca">Acorn</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://q.utoronto.ca">Quercus</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.studentlife.utoronto.ca/as">Accessibility</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://webmail.utoronto.ca/">Webmail</a>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+        </nav>
+      </header>
+    <!-- END header -->
+
+    <!-- Decorative banner at the top of the page ----------------------------->
+    <section class="resultDisplay resultDisplay-innerpage overlay"
+     data-stellar-background-ratio="0.5" style="background-image: url(images/UTSCcover.jpg)";>
+      <div class="container">
+        <div class="row align-items-center resultDisplay-inner justify-content-center">
+          <div class="col-md-8 text-center">
+            <div class="mb-5 element-animate">
+              <h5 id="uTaskLogo"><br><br>UTask </h5><h5 id="DriveName">DRIVE</h5>
+              <p>
+                Secure and Easy Access to All Your Files
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- END section -->
+    <section class="spacer"
+    style="background: #01346D;
+    padding: 1px;"></section>
+
+    <section class="UTaskDriveSearch"
+    style="background: #ffffff;">
+
+      <div class="container"
+      style="padding-top: 20px;
+      display: inline;
+      align-items: center;">
+          <!-- SEARCH Bar ----------------------------------------------------->
+          <input type="text" placeholder="Drive Search">
+          <button type="button">Search</button>
+          <!-- Upload Button -------------------------------------------------->
+          <button type="button">Upload</button>
+      </div>
+    </section>
+    <!-- END section -->
+    <section class="spacer"
+    style="background: #01346D;
+    padding: 1px;
+    margin-top:20px;"></section>
+
+    <section class="UTaskDrive" style="background: #ffffff;">
+      <div class="container">
+          <!-- SEARCH Bar -->
+          <h5 class="myDriveText">My Private Documents </h5>
+
+        <!--Files should be added here. The container is already configured to
+            become larger or smaller based on the number of files displayed. -->
+        <!-- Icon files are in ./images/fileIcons/ -->
+          <div class='file'>
+              <a href="index.html"><img src="./images/fileIcons/006-txt.png"></a>
+              <a href="index.html">Document Name</a>
+              <a href="index.html" class="indexButton">Index</a>
+              <p class="fileSize">[12MB]</p>
+          </div>
+          <div class='file'>
+              <a href="index.html"><img src="./images/fileIcons/021-pdf.png"></a>
+              <a href="index.html">Document Name</a>
+              <a href="index.html" class="indexButton">Index</a>
+              <p class="fileSize">[12MB]</p>
+          </div>
+          <div class='file'>
+              <a href="index.html"><img src="./images/fileIcons/043-doc.png"></a>
+              <a href="index.html">Document Name</a>
+              <a href="index.html" class="indexButton">Index</a>
+              <p class="fileSize">[12MB]</p>
+          </div>
+          <div class='file'>
+              <a href="index.html"><img src="./images/fileIcons/026-mov.png"></a>
+              <a href="index.html">Document Name</a>
+              <a href="index.html" class="indexButton">Index</a>
+              <p class="fileSize">[12MB]</p>
+          </div>
+          <div class='file'>
+              <a href="index.html"><img src="./images/fileIcons/039-gif.png"></a>
+              <a href="index.html">Document Name</a>
+              <a href="index.html" class="indexButton">Index</a>
+              <p class="fileSize">[12MB]</p>
+          </div>
+          <div class='file'>
+              <a href="index.html"><img src="./images/fileIcons/032-jpg.png"></a>
+              <a href="index.html">Document Name</a>
+              <a href="index.html" class="indexButton">Index</a>
+              <p class="fileSize">[12MB]</p>
+          </div>
+
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="spacer" style="background: #01346D; padding: 1px"></section>
+
+    <section class="UTaskDrive" style="background: #ffffff";>
+      <div class="container">
+         <!-- SEARCH Bar -->
+        <h5 class="myDriveText">Documents I Share</h5>
+
+        <!--Files should be added here. The container is already configured to
+            become larger or smaller based on the number of files displayed. -->
+        <!-- Icon files are in ./images/fileIcons/ -->
+        <div class='file'>
+            <a href="index.html"><img src="./images/fileIcons/006-txt.png"></a>
+            <a href="index.html">Document Name</a>
+            <a href="index.html" class="revertPrivate">Revert to Private</a>
+            <p class="fileSize">[12MB]</p>
+        </div>
+        <div class='file'>
+            <a href="index.html"><img src="./images/fileIcons/006-txt.png"></a>
+            <a href="index.html">Document Name</a>
+            <a href="index.html" class="revertPrivate">Revert to Private</a>
+            <p class="fileSize">[12MB]</p>
+        </div>
+        <div class='file'>
+            <a href="index.html"><img src="./images/fileIcons/006-txt.png"></a>
+            <a href="index.html">Document Name</a>
+            <a href="index.html" class="revertPrivate">Revert to Private</a>
+            <p class="fileSize">[12MB]</p>
+        </div>
+        <div class='file'>
+            <a href="index.html"><img src="./images/fileIcons/006-txt.png"></a>
+            <a href="index.html">Document Name</a>
+            <a href="index.html" class="revertPrivate">Revert to Private</a>
+            <p class="fileSize">[12MB]</p>
+        </div>
+        <div class='file'>
+            <a href="index.html"><img src="./images/fileIcons/006-txt.png"></a>
+            <a href="index.html">Document Name</a>
+            <a href="index.html" class="revertPrivate">Revert to Private</a>
+            <p class="fileSize">[12MB]</p>
+        </div>
+        <div class='file'>
+            <a href="index.html"><img src="./images/fileIcons/006-txt.png"></a>
+            <a href="index.html">Document Name</a>
+            <a href="index.html" class="revertPrivate">Revert to Private</a>
+            <p class="fileSize">[12MB]</p>
+        </div>
+
+      </div>
+    </section>
+    <!-- END section -->
+
+    <section class="spacer" style="background: #01346D; padding: 1px"></section>
+    <section class="UTaskDrive" style="background: #ffffff";>
+      <div class="container">
+          <h5 class="myDriveText">Document Type Breakdown</h5>
+        <!--Div that will hold the pie chart-->
+        <div id="chart_div"></div>
+      </div>
+    </section>
+
+
+    <!-- loader -->
+    <div id="loader" class="show fullscreen"><svg class="circular" width="48px"
+         height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none"
+         stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24"
+         r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+         stroke="#f4b214"/></svg>
+     </div>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-migrate-3.0.0.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

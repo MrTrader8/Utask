@@ -1,0 +1,225 @@
+
+@font-face {
+    font-family: ProductSans;
+    src: url('./fonts/ProductSansRegular.ttf');
+}
+@font-face {
+    font-family: ProductSansBold;
+    src: url('./fonts/ProductSansBold.ttf');
+}
+@font-face {
+    font-family: ProductSansItalic;
+    src: url('./fonts/ProductSansItalic.ttf');
+}
+
+.logoBox {
+    float: left;
+    width: 180px;
+    height: 45px;
+    background-color:#ffffff;
+    border-left:
+}
+.logoBox .logoImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 38px;
+    float: center;
+}
+
+.menuBox {
+    float: right;
+    width:calc(100% - 180px);
+    height: 45px;
+    background-color: #01346D;
+    box-sizing: border-box;
+}
+
+.menuBox ul {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: #01346D;
+    align: center;
+}
+
+.menuBox li {
+    float: left;
+    align: center;
+    text-align: center;
+}
+
+.menuBox li a {
+    display: block;
+    color: white;
+    text-align: center;
+    align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.menuBox li a:hover:not(.active) {
+    font-family: ProductSansBold;
+    align: center;
+    color: #00A1F1;
+}
+
+/*---------------------------------------------------------------------------- */
+
+#mainFooter {
+    text-align: center;
+    font-size: 12px;
+    color: #B7B7B7;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+body {
+    background: #e9e9e9;
+    color: #666666;
+    font-family: 'ProductSans', 'Helvetica', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header Section */
+.headerSection {
+    padding: 20px 0;
+    text-align: center;
+    align: center;
+}
+.headerSection h2 {
+    padding-top: 40px;
+    margin: 0 0 20px;
+    font-size: 24px;
+    font-weight: 300;
+}
+.headerSection span {
+    font-size: 12px;
+}
+.headerSection span .toggleButton {
+    color: #33b5e5;
+}
+.headerSection span a {
+    color: #33b5e5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+
+/* Form Module */
+.formSwitcher {
+    position: relative;
+    background: #ffffff;
+    max-width: 800px;
+    width: 80%;
+    max-height: 800px;
+    height: 80%;
+    border-top: 5px solid #01346D;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+}
+.formSwitcher .toggle {
+    cursor: pointer;
+    position: absolute;
+    top: -0;
+    right: -0;
+    background: #01346D;
+    width: 30px;
+    height: 30px;
+    margin: -5px 0 0;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 30px;
+    text-align: center;
+}
+.formSwitcher .toggle .tooltip {
+    position: absolute;
+    top: 5px;
+    right: -65px;
+    display: block;
+    background: #01346D;
+    width: auto;
+    padding: 5px;
+    font-size: 10px;
+    line-height: 1;
+    font-family: ProductSansBold;
+}
+.formSwitcher .toggle .tooltip:before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: -5px;
+    display: block;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid #01346D;
+}
+.formSwitcher .form {
+    display: none;
+    padding: 40px;
+}
+
+.formSwitcher .form:nth-child(2) {
+    display: block;
+}
+.formSwitcher h2 {
+    margin: 0 0 20px;
+    color: #01346D;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 1;
+}
+.formSwitcher input {
+    outline: none;
+    display: block;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    margin: 0 0 20px;
+    padding: 10px 15px;
+    padding-left: 8px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-family: ProductSansItalic;
+    transition: 0.3s ease;
+}
+.formSwitcher input:focus {
+    border: 1px solid #01346D;
+    color: #434343;
+    font-family: ProductSans;
+}
+.formSwitcher button {
+    cursor: pointer;
+    background: #01346D;
+    width: 100%;
+    border: 0;
+    padding: 10px 15px;
+    color: #ffffff;
+    transition: 0.3s ease;
+    font-family: ProductSansBold;
+    font-size: 13px;
+}
+
+.selection {
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+.formSwitcher button:hover {
+    background: #0365D3;
+}
+.formSwitcher .forgotPassword {
+    background: #f2f2f2;
+    width: 100%;
+    padding: 15px 40px;
+    box-sizing: border-box;
+    color: #01346D;
+    font-size: 12px;
+    text-align: center;
+}
+.formSwitcher .forgotPassword a {
+    color: #01346D;
+    text-decoration: none;
+}
